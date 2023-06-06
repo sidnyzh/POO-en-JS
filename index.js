@@ -2,13 +2,26 @@ class Cliente
 {
     nombre; 
     dni;
-    numeroDeCuenta;
-    saldoDeLaCuenta;
+    RUT;
+    CuentasCorrientes;
+}
+
+class CuentaCorriente
+{
+    numero; 
+    saldo; 
+    agencia; 
+
+    depositoEnCuenta(valor){
+        this.saldo = this.saldo + valor; 
+    }
 }
 const cliente1 = new Cliente();
+const CuentaCorriente1 = new CuentaCorriente();
 
 cliente1.nombre = "sidny"; 
-cliente1.numeroDeCuenta = " 1235423453"; 
-cliente1.saldoDeLaCuenta = "10000000";
+CuentaCorriente1.numero = "125646654";
+CuentaCorriente1.saldo = "10000000";
 
-console.log(cliente1)
+CuentaCorriente1.depositoEnCuenta(10000)
+console.log(CuentaCorriente1.saldo);
