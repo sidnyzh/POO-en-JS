@@ -1,0 +1,21 @@
+{
+  "name": "cuentasbanco",
+  "version": "1.0.0",
+  "description": "cuentas corrientes para banco ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidnyzh/POO-en-JS.git"
+  },
+  "author": "sidny zh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidnyzh/POO-en-JS/issues"
+  },
+  "homepage": "https://github.com/sidnyzh/POO-en-JS#readme"
+  
+}
