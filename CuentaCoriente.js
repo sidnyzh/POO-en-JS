@@ -1,4 +1,4 @@
-import { Cliente } from "./Cliente";
+import { Cliente } from "./Cliente.js";
 
 export class CuentaCorriente
 {
@@ -15,15 +15,16 @@ export class CuentaCorriente
     }
 
     get cliente() {
-        return this.#cliente
+        return this.#cliente;
     }
 
-    constructor() {
+    constructor(cliente, numero, agencia) {
         // toda cuenta que se cree va a tener su  #saldo en 0
-        this.#cliente = null;  //esto se hace para eviar que cada vesz que la cuenta se cree, cree un nuevo cliente, ya que el cliente debe ser de la clase cliente 
+        //this.#cliente = null;  //esto se hace para eviar que cada vesz que la cuenta se cree, cree un nuevo cliente, ya que el cliente debe ser de la clase cliente 
+        this.numero = numero;
+        this.agencia = agencia; 
         this. #saldo = 0; 
-        this.numero = ""; 
-        this.agencia = "";
+
     }
 
     depositoEnCuenta(valor){
