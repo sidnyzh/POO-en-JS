@@ -1,12 +1,15 @@
 export class CuentaCorriente
 {
+    cliente;
     numero; 
     // este # hace la propieda privada, esto quere decir que solo se modifica dentro de la clase, a través de sus métodos
     #saldo; 
     agencia; 
+ 
 
     constructor() {
         // toda cuenta que se cree va a tener su  #saldo en 0
+        this.cliente = null;  //esto se hace para eviar que cada vesz que la cuenta se cree, cree un nuevo cliente, ya que el cliente debe ser de la clase cliente 
         this. #saldo = 0; 
         this.numero = ""; 
         this.agencia = "";
@@ -27,5 +30,10 @@ export class CuentaCorriente
     }
     verSaldo(){
         return this.#saldo;
+    }
+
+    transferirACuenta(valor, cuentaDestino){
+        this.retirarEnCuenta(valor); 
+        cuentaDestino.depositoEnCuenta(valor); 
     }
 }
