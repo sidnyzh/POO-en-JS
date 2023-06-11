@@ -1,14 +1,12 @@
-import { Cuenta } from "./Cuenta.js";
+import { Cuenta } from "./Cuenta";
 
-export class CuentaCorriente extends Cuenta 
-{
+export class CuentaDeAhorros extends Cuenta {
     static cantidadDeCuentas = 0; 
 
-    constructor(cliente, numero, agencia) {
+    constructor(cliente, numero, agencia, saldo) {
         //Super referencia al constructor de la clase padre (cuenta)
-        super(cliente, numero,agencia, 0);
+        super(cliente, numero,agencia, saldo);
         //Es una sola instancia, no tiene sentido indicarle  "this" no se puede acceder de sta forma, entonces su valor, se atribuye a la clase.
         CuentaCorriente.cantidadDeCuentas++; 
-
     }
 }
