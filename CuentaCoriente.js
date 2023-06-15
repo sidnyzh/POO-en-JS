@@ -11,4 +11,9 @@ export class CuentaCorriente extends Cuenta
         CuentaCorriente.cantidadDeCuentas++; 
 
     }
+ //sobreescritura de método 
+    prueba(){
+        //para acceder a los métodos padre
+        super.prueba();
+    }
 }

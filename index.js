@@ -3,6 +3,7 @@
 import {CuentaCorriente} from './CuentaCoriente.js';
 import {Cliente} from './Cliente.js';
 import {CuentaDeAhorros} from './CuentaDeAhorros.js';
+import { CuentaDeAhorros } from './CuentaDeAhorros.js';
 
 
 
@@ -22,4 +23,6 @@ const CuentaCorriente2 = new CuentaCorriente(cliente2, "124446654", "12");
 let saldo2 = CuentaCorriente2.verSaldo();
 
 CuentaCorriente1.transferirACuenta(200, CuentaCorriente2); 
-console.log(CuentaCorriente2)
+console.log(CuentaCorriente2); 
+
+CuentaCorriente1.prueba()
